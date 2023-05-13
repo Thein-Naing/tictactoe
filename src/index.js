@@ -21,11 +21,11 @@ const Square = (props) => { // Square component is child of Board component.
   )
 }
 
-const Board = () => { // Board component is child of Game component.
+const Board = (i) => { // Board component is child of Game component.
 
-const renderSquare = () => {
+const renderSquare = (i) => {
   return (
-    <Square value="O"/> // add prop value here for Square(child) component.
+    <Square value={i}/> // add prop value here for Square(child) component.
   );
 };
 
