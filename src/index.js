@@ -7,25 +7,29 @@ import './index.css';
 const Square = (props) => { // Square component is child of Board component.
   // add props as argument.
   return(
-    // <div style={{
-    //   backgroundColor: "gold",
-    //   margin: 10,
-    //   padding: 20,
-    // }}> // replace inline style with className='square'
-    <div className='square'>
+     // replace inline style with className='square'
+     // replace div with button for event listening.
+
+    <button
+    className='square'
+    onClick={()=>(`square ${props.value} clicked`)}
+
+
+
+    >
       {/* /* Square / replace with X // call Board (parent) component prop value here as Js function call. */}
       {props.value}
       {/* X replace with prop. */}
-    </div>
+    </button>
 
   )
 }
 
 const Board = () => { // Board component is child of Game component.
 
-const renderSquare = (i) => {
+const renderSquare = (i) => { // add index i for square selection
   return (
-    <Square value={i}/> // add prop value here for Square(child) component.
+    <Square value={i}/> // add prop value here for Square(child) component. add index(i) for individual number.
   );
 };
 
