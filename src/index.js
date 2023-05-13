@@ -21,7 +21,7 @@ const Square = (props) => { // Square component is child of Board component.
   )
 }
 
-const Board = (i) => { // Board component is child of Game component.
+const Board = () => { // Board component is child of Game component.
 
 const renderSquare = (i) => {
   return (
@@ -37,13 +37,13 @@ const renderSquare = (i) => {
     }}>
     Board
     <div className='board-row'>
-      {renderSquare()}{renderSquare()}{renderSquare()}
+      {renderSquare(0)}{renderSquare(1)}{renderSquare(2)}
     </div>
     <div className='board-row'>
-    {renderSquare()}{renderSquare()}{renderSquare()}
+    {renderSquare(3)}{renderSquare(4)}{renderSquare(5)}
     </div>
     <div className='board-row'>
-    {renderSquare()}{renderSquare()}{renderSquare()}
+    {renderSquare(6)}{renderSquare(7)}{renderSquare(8)}
     </div>
 
 
