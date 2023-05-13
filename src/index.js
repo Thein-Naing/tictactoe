@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
@@ -29,7 +29,8 @@ const Board = () => { // Board component is child of Game component.
 
 const renderSquare = (i) => { // add index i for square selection
   return (
-    <Square value={i}/> // add prop value here for Square(child) component. add index(i) for individual number.
+    // <Square value={i}/> // add prop value here for Square(child) component. add index(i) for individual number.
+    <Square /> // delete prop.
   );
 };
 
