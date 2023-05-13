@@ -4,7 +4,8 @@ import './index.css';
 // import App from './App';
 
 
-const Square = () => { // Square component is child of Board component.
+const Square = (props) => { // Square component is child of Board component.
+  // add props as argument.
   return(
     // <div style={{
     //   backgroundColor: "gold",
@@ -12,8 +13,9 @@ const Square = () => { // Square component is child of Board component.
     //   padding: 20,
     // }}> // replace inline style with className='square'
     <div className='square'>
-      {/* Square / replace with X */}
-      X
+      {/* /* Square / replace with X // call Board (parent) component prop value here as Js function call. */}
+      {props.value}
+      {/* X replace with prop. */}
     </div>
 
   )
@@ -23,7 +25,7 @@ const Board = () => { // Board component is child of Game component.
 
 const renderSquare = () => {
   return (
-    <Square />
+    <Square value="O"/> // add prop value here for Square(child) component.
   );
 };
 
