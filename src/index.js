@@ -20,6 +20,13 @@ const Square = () => { // Square component is child of Board component.
 }
 
 const Board = () => { // Board component is child of Game component.
+
+const renderSquare = () => {
+  return (
+    <Square />
+  );
+};
+
   return(
     <div style={{
       backgroundColor: "skyblue",
