@@ -6,15 +6,16 @@ import './index.css';
 
 const Square = () => { // Square component is child of Board component.
   return(
-    <div style={{
-      backgroundColor: "gold",
-      margin: 10,
-      padding: 20,
-    }}>
+    // <div style={{
+    //   backgroundColor: "gold",
+    //   margin: 10,
+    //   padding: 20,
+    // }}> // replace inline style with className='square'
     <div className='square'>
-      Square
+      {/* Square / replace with X */}
+      X
     </div>
-    </div>
+
   )
 }
 
