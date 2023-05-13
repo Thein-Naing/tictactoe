@@ -5,7 +5,14 @@ import './index.css';
 
 const Game  = () => {
 return(
-  <div>Game</div>
+  // use css inline styling for Game.
+  <div style={{
+    backgroundColor: "salmon",
+    margin: 10,
+    padding: 20,
+  }}>
+    Game
+  </div>
 
 )};
 
