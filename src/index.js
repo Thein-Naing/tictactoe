@@ -6,27 +6,38 @@ import './index.css';
 
 const Square = () => { // Square component is child of Board component.
   return(
-    // <div style={{
-    //   backgroundColor: "gold",
-    //   margin: 10,
-    //   padding: 20,
-    // }}>
-    <className='square'>
+    <div style={{
+      backgroundColor: "gold",
+      margin: 10,
+      padding: 20,
+    }}>
+    <div className='square'>
       Square
+    </div>
     </div>
   )
 }
 
 const Board = () => { // Board component is child of Game component.
   return(
-    // <div style={{
-    //   backgroundColor: "skyblue",
-    //   margin: 10,
-    //   padding: 20,
-    // }}>
-    <div className='board'>
-      Board
-      < Square />
+    <div style={{
+      backgroundColor: "skyblue",
+      margin: 10,
+      padding: 20,
+    }}>
+    Board
+    <div className='board-row'>
+      <Square />< Square />< Square />
+    </div>
+    <div className='board-row'>
+      <Square />< Square />< Square />
+    </div>
+    <div className='board-row'>
+      <Square />< Square />< Square />
+    </div>
+
+
+
     </div>
 
   )

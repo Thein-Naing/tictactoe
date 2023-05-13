@@ -4,3 +4,18 @@ body {
   background-color: #444;
   color:white;
 }
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+.board-row {
+  display: flex;
+  flex-flow: row nowrap;
+  /* align-items: center; */
+
+}
