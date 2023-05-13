@@ -6,11 +6,12 @@ import './index.css';
 
 const Square = () => { // Square component is child of Board component.
   return(
-    <div style={{
-      backgroundColor: "gold",
-      margin: 10,
-      padding: 20,
-    }}>
+    // <div style={{
+    //   backgroundColor: "gold",
+    //   margin: 10,
+    //   padding: 20,
+    // }}>
+    <className='square'>
       Square
     </div>
   )
@@ -18,11 +19,12 @@ const Square = () => { // Square component is child of Board component.
 
 const Board = () => { // Board component is child of Game component.
   return(
-    <div style={{
-      backgroundColor: "skyblue",
-      margin: 10,
-      padding: 20,
-    }}>
+    // <div style={{
+    //   backgroundColor: "skyblue",
+    //   margin: 10,
+    //   padding: 20,
+    // }}>
+    <div className='board'>
       Board
       < Square />
     </div>
@@ -33,11 +35,12 @@ const Board = () => { // Board component is child of Game component.
 const Game  = () => {
 return(
   // use css inline styling for Game.
-  <div style={{
-    backgroundColor: "salmon",
-    margin: 10,
-    padding: 20,
-  }}>
+  // <div style={{
+  //   backgroundColor: "salmon",
+  //   margin: 10,
+  //   padding: 20,
+  // }}>
+  <div className='game'>
     Game
     <Board />
   </div>
