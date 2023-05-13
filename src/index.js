@@ -35,13 +35,13 @@ const renderSquare = () => {
     }}>
     Board
     <div className='board-row'>
-      <Square />< Square />< Square />
+      {renderSquare()}{renderSquare()}{renderSquare()}
     </div>
     <div className='board-row'>
-      <Square />< Square />< Square />
+    {renderSquare()}{renderSquare()}{renderSquare()}
     </div>
     <div className='board-row'>
-      <Square />< Square />< Square />
+    {renderSquare()}{renderSquare()}{renderSquare()}
     </div>
 
 
