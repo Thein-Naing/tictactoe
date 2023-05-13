@@ -4,9 +4,19 @@ import './index.css';
 // import App from './App';
 
 
+const Square = () => { // Square component is child of Board component.
+  return(
+    <div style={{
+      backgroundColor: "gold",
+      margin: 10,
+      padding: 20,
+    }}>
+      Square
+    </div>
+  )
+}
 
-
-const Board = () => {
+const Board = () => { // Board component is child of Game component.
   return(
     <div style={{
       backgroundColor: "skyblue",
@@ -14,6 +24,7 @@ const Board = () => {
       padding: 20,
     }}>
       Board
+      < Square />
     </div>
 
   )
