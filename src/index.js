@@ -8,7 +8,11 @@ import './index.css';
 
 const Board = () => {
   return(
-    <div>
+    <div style={{
+      backgroundColor: "skyblue",
+      margin: 10,
+      padding: 20,
+    }}>
       Board
     </div>
 
@@ -24,6 +28,7 @@ return(
     padding: 20,
   }}>
     Game
+    <Board />
   </div>
 
 )};
