@@ -6,19 +6,21 @@ import './index.css';
 
 const Square = (props) => { // Square component is child of Board component.
   // add props as argument.
+  const [value, setValue] = useState(null);
   return(
      // replace inline style with className='square'
      // replace div with button for event listening.
 
     <button
     className='square'
-    onClick={()=>(`square ${props.value} clicked`)}
-
-
-
+    // onClick={()=>(`square ${props.value} clicked`)} // replace with setValue setter .
+    onClick={()=>
+    setValue ('X')
+  }
     >
       {/* /* Square / replace with X // call Board (parent) component prop value here as Js function call. */}
-      {props.value}
+      {/* {props.value} // take out props. */}
+      {value}
       {/* X replace with prop. */}
     </button>
 
