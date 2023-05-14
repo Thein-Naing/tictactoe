@@ -33,11 +33,12 @@ const Square = (props) => { // Square component is child of Board component.
 }
 
 const Board = () => { // Board component is child of Game component.
-  const initialSquares = [
-    null, null, null,
-    null, null, null,
-    null, null, null,
-  ];
+  // const initialSquares = [
+  //   null, null, null,
+  //   null, null, null,
+  //   null, null, null,
+  // ]; replace with const initialSquares = Array(9).fill(null);
+  const initialSquares = Array(9).fill(null);
   const[squares, setSquares] = useState(initialSquares); // for state lifitng.we use initialSquares object so we need to define it.
   const handleClick = (i) => {
       // alert (`square ${i} clicked`);
