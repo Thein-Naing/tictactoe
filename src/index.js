@@ -20,7 +20,7 @@ const Square = (props) => { // Square component is child of Board component.
 // Now, the handle click event handler at the index of the square will be called when the button is clicked.
 
       // onClick={() => {}}>
-        onClick={props.handleClick}>
+        onClick={props.onClickEvent}>
       {/* /* Square / replace with X // call Board (parent) component prop value here as Js function call. */}
       {/* {props.value} // take out props. add props again for state lifting */}
       {/* Now, let's show the value as a property of the passed down props object. */}
