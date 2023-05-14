@@ -65,6 +65,7 @@ const renderSquare = (i) => { // add index i for square selection
   );
 };
 
+  const status = `Next Player ${xIsNext ? 'X' : 'O' }`;
   return(
     <div style={{
       backgroundColor: "skyblue",
