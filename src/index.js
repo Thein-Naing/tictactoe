@@ -60,9 +60,12 @@ const renderSquare = (i) => { // add index i for square selection
   );
 };
 
-  const status = `Next Player ${xIsNext ? 'X' : 'O' }`;
+  const winner = calculateWinner(squares);
+  const status =  winner ? `Winner:${winner}` :
+  `Next Player ${xIsNext ? 'X' : 'O' }`;
+
   return(
-    <div>
+       <div>
     <div className='status'>{status}</div>
     <div className='board-row'>
       {renderSquare(0)}{renderSquare(1)}{renderSquare(2)}
