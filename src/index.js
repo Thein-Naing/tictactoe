@@ -26,18 +26,13 @@ const Square = (props) => { // Square component is child of Board component.
       {/* Now, let's show the value as a property of the passed down props object. */}
       {props.value}
       {/* X replace with prop. */}
-
     </button>
 
   )
 }
 
 const Board = () => { // Board component is child of Game component.
-  // const initialSquares = [
-  //   null, null, null,
-  //   null, null, null,
-  //   null, null, null,
-  // ]; replace with const initialSquares = Array(9).fill(null);
+
   const initialSquares = Array(9).fill(null);
   const[squares, setSquares] = useState(initialSquares); // for state lifitng.we use initialSquares object so we need to define it.
   const[xIsNext, setXIsNext]  = useState(true);
@@ -67,11 +62,6 @@ const renderSquare = (i) => { // add index i for square selection
 
   const status = `Next Player ${xIsNext ? 'X' : 'O' }`;
   return(
-    // <div style={{
-    //   backgroundColor: "skyblue",
-    //   margin: 10,
-    //   padding: 20,
-    // }}>
     <div>
     <div className='status'>{status}</div>
     <div className='board-row'>
@@ -90,12 +80,6 @@ const renderSquare = (i) => { // add index i for square selection
 
 const Game  = () => {
 return(
-  // use css inline styling for Game.
-  // <div style={{
-  //   backgroundColor: "salmon",
-  //   margin: 10,
-  //   padding: 20,
-  // }}>
   <div className='game'>
     {/* Game */}
     Tic-Tac-Toe
@@ -107,3 +91,21 @@ return(
 ReactDOM.render(
   <Game />,
   document.getElementById('root'));
+
+  function calculateWinner(squares) {
+    const lines = [
+    [0, 1, 2] , [3, 4, 5], [6, 7, 8],// horizontal
+    [0, 3, 6] , [1, 4, 7], [2, 5, 8 ],// vertical
+    [0, 4, 8], [2, 4, 6], // diagonals
+    ];
+
+    for (line of lines) {
+      const [a, b, c] = line;
+      if(squares[a] && squares[a] === squares[b]  && squares[a]  === squares[c] )
+      {
+        return squares[a];
+      }
+
+    }
+    return null;
+  }
