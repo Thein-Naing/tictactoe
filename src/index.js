@@ -40,8 +40,17 @@ const Board = () => { // Board component is child of Game component.
   ];
   const[squares, setSquares] = useState(initialSquares); // for state lifitng.we use initialSquares object so we need to define it.
   const handleClick = (i) => {
+      // alert (`square ${i} clicked`);
+      // 1. make a copy of the square state array.
+      const newSquares = [...squares];
+      // 2.mutate, the copy setting is index element t0 X.
+      newSquares[i] = "X";
+      //3.call the setSquares function with the mutated copy.
+      setSquares(newSquares);
 
-      alert (`square ${i} clicked`);
+
+
+
 
   };
 
@@ -71,9 +80,6 @@ const renderSquare = (i) => { // add index i for square selection
     <div className='board-row'>
     {renderSquare(6)}{renderSquare(7)}{renderSquare(8)}
     </div>
-
-
-
     </div>
 
   )
