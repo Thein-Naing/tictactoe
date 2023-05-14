@@ -42,6 +42,13 @@ const Board = () => { // Board component is child of Game component.
       // alert (`square ${i} clicked`);
       // 1. make a copy of the square state array.
       const newSquares = [...squares];
+
+      const winnerDeclared = Boolean(calculateWinner(newSquares));
+      const squareFilled = Boolean(newSquares[i]);
+      if (winnerDeclared || squareFilled ) {
+        return;
+      }
+
       // 2.mutate, the copy setting is index element t0 X.
       newSquares[i] = xIsNext ? "X" : "O"; // to show player X or O
       //3.call the setSquares function with the mutated copy.
