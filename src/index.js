@@ -67,12 +67,13 @@ const renderSquare = (i) => { // add index i for square selection
 
   const status = `Next Player ${xIsNext ? 'X' : 'O' }`;
   return(
-    <div style={{
-      backgroundColor: "skyblue",
-      margin: 10,
-      padding: 20,
-    }}>
-    Board
+    // <div style={{
+    //   backgroundColor: "skyblue",
+    //   margin: 10,
+    //   padding: 20,
+    // }}>
+    <div>
+    <div className='status'>{status}</div>
     <div className='board-row'>
       {renderSquare(0)}{renderSquare(1)}{renderSquare(2)}
     </div>
@@ -96,7 +97,8 @@ return(
   //   padding: 20,
   // }}>
   <div className='game'>
-    Game
+    {/* Game */}
+    Tic-Tac-Toe
     <Board />
   </div>
 
