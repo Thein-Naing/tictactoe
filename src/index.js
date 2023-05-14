@@ -102,7 +102,7 @@ ReactDOM.render(
     [0, 4, 8], [2, 4, 6], // diagonals
     ];
 
-    for (line of lines) {
+    for (let line of lines) {
       const [a, b, c] = line;
       if(squares[a] && squares[a] === squares[b]  && squares[a]  === squares[c] )
       {
