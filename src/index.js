@@ -6,7 +6,8 @@ import './index.css';
 
 const Square = (props) => { // Square component is child of Board component.
   // add props as argument.
-  const [value, setValue] = useState(null);
+  // const [value, setValue] = useState(null); //In our square component,
+  // we no longer need local state for the value,  since it is now being passed
   return(
      // replace inline style with className='square'
      // replace div with button for event listening.
@@ -14,13 +15,13 @@ const Square = (props) => { // Square component is child of Board component.
     <button
     className='square'
     // onClick={()=>(`square ${props.value} clicked`)} // replace with setValue setter .
-    onClick={()=>
-    setValue ('X')
-  }
-    >
+    onClick={()=> }>  // setValue ('X') //also setValue() Unclick Handler is no longer applicable.
+
+
       {/* /* Square / replace with X // call Board (parent) component prop value here as Js function call. */}
       {/* {props.value} // take out props. */}
-      {value}
+      {/* Now, let's show the value as a property of the passed down props object. */}
+      {props.value}
       {/* X replace with prop. */}
     </button>
 
@@ -28,11 +29,17 @@ const Square = (props) => { // Square component is child of Board component.
 }
 
 const Board = () => { // Board component is child of Game component.
+  const initialSquares = [
+    null, null, null,
+    null, null, null,
+    null, null, null,
+  ];
+  const[squares, setSquares] = useState(initialSquares); // for state lifitng.we use initialSquares object so we need to define it.
 
 const renderSquare = (i) => { // add index i for square selection
   return (
     // <Square value={i}/> // add prop value here for Square(child) component. add index(i) for individual number.
-    <Square /> // delete prop.
+    <Square value={squares[i]} /> // delete prop.
   );
 };
 
